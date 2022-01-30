@@ -14,10 +14,6 @@ defmodule AdoptingPoolboyWeb.Application do
       AdoptingPoolboyWeb.Endpoint,
       # Start a worker by calling: AdoptingPoolboyWeb.Worker.start_link(arg)
       # {AdoptingPoolboyWeb.Worker, arg},
-      %{
-        id: AdoptingPoolboyWeb.MathSqrtPoolboy.App,
-        start: {AdoptingPoolboyWeb.MathSqrtPoolboy.App, :start, [[], []]}
-      }
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

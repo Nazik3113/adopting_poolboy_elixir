@@ -49,7 +49,6 @@ defmodule AdoptingPoolboyWeb.MixProject do
       {:adopting_poolboy, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:poolboy, "~> 1.5.1"}
     ]
   end
 

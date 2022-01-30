@@ -9,9 +9,13 @@ defmodule AdoptingPoolboy.Application do
   def start(_type, _args) do
     children = [
       # Start the PubSub system
-      {Phoenix.PubSub, name: AdoptingPoolboy.PubSub}
+      {Phoenix.PubSub, name: AdoptingPoolboy.PubSub},
       # Start a worker by calling: AdoptingPoolboy.Worker.start_link(arg)
       # {AdoptingPoolboy.Worker, arg}
+      %{
+        id: AdoptingPoolboy.MathSqrtPoolboy.App,
+        start: {AdoptingPoolboy.MathSqrtPoolboy.App, :start, [[], []]}
+      }
     ]
 
     Supervisor.start_link(children, strategy: :one_for_one, name: AdoptingPoolboy.Supervisor)

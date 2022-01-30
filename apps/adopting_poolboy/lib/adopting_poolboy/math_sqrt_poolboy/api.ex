@@ -1,4 +1,4 @@
-defmodule AdoptingPoolboyWeb.MathSqrtPoolboy.Api do
+defmodule AdoptingPoolboy.MathSqrtPoolboy.Api do
   @timeout 60000
 
   def start(start_num, end_num) do
