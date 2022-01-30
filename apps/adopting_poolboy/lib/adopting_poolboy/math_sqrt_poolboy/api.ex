@@ -15,7 +15,7 @@ defmodule AdoptingPoolboy.MathSqrtPoolboy.Api do
 
   defp add_count_sqrt_to_pool(num) do
     Task.async(fn ->
-      :poolboy.transaction(:worker, &GenServer.call(&1, {:square_root, num}, @timeout), @timeout)
+      :poolboy.transaction(:math_sqrt, &GenServer.call(&1, {:square_root, num}, @timeout), @timeout)
     end)
   end
 

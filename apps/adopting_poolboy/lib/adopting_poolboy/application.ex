@@ -15,7 +15,7 @@ defmodule AdoptingPoolboy.Application do
       %{
         id: AdoptingPoolboy.MathSqrtPoolboy.App,
         start: {AdoptingPoolboy.MathSqrtPoolboy.App, :start, [[], []]}
-      }
+      },
     ]
 
     Supervisor.start_link(children, strategy: :one_for_one, name: AdoptingPoolboy.Supervisor)
