@@ -15,8 +15,8 @@ defmodule AdoptingPoolboyWeb.Application do
       # Start a worker by calling: AdoptingPoolboyWeb.Worker.start_link(arg)
       # {AdoptingPoolboyWeb.Worker, arg},
       %{
-        id: AdoptingPoolboyWeb.Controllers.PoolboyApp.MathSqrt,
-        start: {AdoptingPoolboyWeb.Controllers.PoolboyApp.MathSqrt, :start, [[], []]}
+        id: AdoptingPoolboyWeb.MathSqrtPoolboy.App,
+        start: {AdoptingPoolboyWeb.MathSqrtPoolboy.App, :start, [[], []]}
       }
     ]
 

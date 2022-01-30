@@ -1,10 +1,10 @@
-defmodule AdoptingPoolboyWeb.Controllers.PoolboyApp.MathSqrt do
+defmodule AdoptingPoolboyWeb.MathSqrtPoolboy.App do
   use Application
 
   defp poolboy_config do
     [
       name: {:local, :worker},
-      worker_module: AdoptingPoolboyWeb.Controllers.PoolboyWorkers.MathSqrt,
+      worker_module: AdoptingPoolboyWeb.MathSqrtPoolboy.Worker,
       size: 5,
       max_owerflow: 2
     ]

@@ -1,4 +1,4 @@
-defmodule AdoptingPoolboyWeb.Controllers.PoolboyWorkers.MathSqrt do
+defmodule AdoptingPoolboyWeb.MathSqrtPoolboy.Worker do
   use GenServer
 
   def start_link(_) do
